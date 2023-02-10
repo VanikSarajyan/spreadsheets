@@ -6,7 +6,27 @@ class Color:
         self.__blue = blue
 
     def get_rgb(self):
-        pass
+        return self.__red, self.__green, self.__blue
 
     def set_rgb(self, red, green, blue):
-        pass
+        self.__red = Color.validate_color_component(red)
+        self.__green = Color.validate_color_component(green)
+        self.__blue = Color.validate_color_component(blue)
+
+    def __eq__(self, other):
+        if isinstance(other, tuple):
+            return self.get_rgb() == other
+        if isinstance(other, Color):
+            return self.get_rgb() == other.get_rgb()
+        else:
+            return False
+
+    @staticmethod
+    def validate_color_component(component):
+        component = int(component)
+        if component > 255:
+            component = 255
+        elif component < 0:
+            component = 0
+
+        return component
