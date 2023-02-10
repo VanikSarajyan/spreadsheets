@@ -57,6 +57,7 @@ class TestCell(TestBase):
         cell.reset()
 
         TestBase.check("reset", cell.get_value() == "")
+
     @staticmethod
     def run_all():
         TestCell.test_get_value()

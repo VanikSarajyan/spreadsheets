@@ -30,3 +30,10 @@ class Cell:
 
     def reset(self):
         pass
+
+    def __eq__(self, other):
+        if isinstance(other, str):
+            return self.__value == other
+        if isinstance(other, Cell):
+            return self.__value == other.__value and self.__color == other.__color
+

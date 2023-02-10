@@ -8,6 +8,8 @@ class Spreadsheet:
         self.__columns = columns
         self.__cells = []
 
+    def get_size(self):
+        pass
     def get_cell_at(self, row, col):
         pass
 
