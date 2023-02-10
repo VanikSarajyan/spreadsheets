@@ -1,4 +1,5 @@
 from spreadsheets.color import Color
+from datetime import datetime as dt
 
 
 class Cell:
@@ -8,32 +9,37 @@ class Cell:
         self.__color = color
 
     def get_value(self):
-        pass
+        return self.__value
 
     def set_value(self, value):
-        pass
+        self.__value = str(value)
 
     def get_color(self):
-        pass
+        return self.__color
 
     def set_color(self, color):
-        pass
+        if isinstance(color, Color):
+            self.__color = Color()
+        else:
+            raise ValueError(f"Can't assign {color} to Cell color.")
 
     def to_int(self):
-        pass
+        return int(self.__value)
 
     def to_double(self):
-        pass
+        return float(self.__value)
 
     def to_date(self):
-        pass
+        return dt.strptime(self.__value, '%m/%d/%y %H:%M:%S')
 
     def reset(self):
-        pass
+        self.__value = ""
+        self.__color = Color()
 
     def __eq__(self, other):
         if isinstance(other, str):
             return self.__value == other
         if isinstance(other, Cell):
             return self.__value == other.__value and self.__color == other.__color
-
+        else:
+            return False

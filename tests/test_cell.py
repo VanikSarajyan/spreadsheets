@@ -47,7 +47,7 @@ class TestCell(TestBase):
     @staticmethod
     def test_to_date():
         cell = Cell("09/19/22 13:55:26")
-        date = datetime.strptime("09/19/22 13:55:26", '%m/%d/%y %H:%M:%S')
+        date = datetime.strptime("09/19/22 13:55:26", "%m/%d/%y %H:%M:%S")
 
         TestBase.check("to_date", cell.to_date() == date)
 
