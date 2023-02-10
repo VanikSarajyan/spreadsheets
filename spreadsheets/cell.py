@@ -8,7 +8,7 @@ class Cell:
         self.__color = color
 
     def get_value(self):
-        return ""
+        pass
 
     def set_value(self, value):
         pass
@@ -20,10 +20,10 @@ class Cell:
         pass
 
     def to_int(self):
-        return 0
+        pass
 
     def to_double(self):
-        return 0.0
+        pass
 
     def to_date(self):
         pass
