@@ -1,14 +1,15 @@
-from color import Color
+from spreadsheets.color import Color
+
 
 class Cell:
 
-    def __init__(self, value = "", color = Color()):
-        self.value = value
-        self.color = color
-    
+    def __init__(self, value="", color=Color()):
+        self.__value = value
+        self.__color = color
+
     def get_value(self):
         return ""
-    
+
     def set_value(self, value):
         pass
 
@@ -20,10 +21,10 @@ class Cell:
 
     def to_int(self):
         return 0
-    
+
     def to_double(self):
         return 0.0
-    
+
     def to_date(self):
         pass
 

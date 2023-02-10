@@ -1,12 +1,13 @@
-from cell import Cell
+from spreadsheets.cell import Cell
+
 
 class Spreadsheet:
 
     def __init__(self, rows, columns):
-        self.rows = rows
-        self.columns = columns
-        self.cells = []
-    
+        self.__rows = rows
+        self.__columns = columns
+        self.__cells = []
+
     def get_cell_at(self, row, col):
         pass
 
@@ -18,7 +19,7 @@ class Spreadsheet:
 
     def remove_row(self, row):
         pass
-    
+
     def add_column(self, col):
         pass
 
