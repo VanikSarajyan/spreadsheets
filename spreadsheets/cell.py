@@ -19,7 +19,7 @@ class Cell:
 
     def set_color(self, color):
         if isinstance(color, Color):
-            self.__color = Color()
+            self.__color = color
         else:
             raise ValueError(f"Can't assign {color} to Cell color.")
 
@@ -43,3 +43,6 @@ class Cell:
             return self.__value == other.__value and self.__color == other.__color
         else:
             return False
+
+    def __repr__(self):
+        return f"[Class {self.__class__.__name__ } value: {self.__value:<10}, color: {self.__color}]"

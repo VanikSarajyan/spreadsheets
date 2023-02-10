@@ -11,4 +11,4 @@ class TestBase(ABC):
     @staticmethod
     def check(test_name, condition):
         passed = "passed V" if condition else "failed X"
-        print(f"Test {test_name} {passed}")
+        print(f"\tTest {test_name:<15} {passed}")

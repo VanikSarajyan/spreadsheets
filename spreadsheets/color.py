@@ -30,3 +30,6 @@ class Color:
             component = 0
 
         return component
+
+    def __repr__(self):
+        return f"[Class {self.__class__.__name__} ({self.__red:<3},{self.__green:<3},{self.__blue:<3})]"

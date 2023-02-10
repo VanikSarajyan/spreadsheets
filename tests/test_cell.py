@@ -27,10 +27,10 @@ class TestCell(TestBase):
     @staticmethod
     def test_set_color():
         cell = Cell()
-        color = Color()
+        color = Color(0, 0, 0)
 
         cell.set_color(color)
-        TestBase.check("set_color", cell.get_color() == (255, 255, 255))
+        TestBase.check("set_color", cell.get_color() == (0, 0, 0))
 
     @staticmethod
     def test_to_int():

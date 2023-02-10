@@ -1,6 +1,8 @@
 from spreadsheets.cell import Cell
+from spreadsheets.color import Color
 from spreadsheets.spreadsheet import Spreadsheet
 from tests.test_base import TestBase
+
 
 
 class TestSpreadsheet(TestBase):
@@ -56,18 +58,20 @@ class TestSpreadsheet(TestBase):
     @staticmethod
     def test_swap_rows():
         sheet = Spreadsheet(3, 3)
-        cell00 = sheet.get_cell_at(0, 0)
+        cell = sheet.get_cell_at(0, 0)
+        cell.set_color(Color(1, 1, 1))
         sheet.swap_rows(0, 1)
 
-        TestBase.check("swap_rows", sheet.get_cell_at(1, 0) == cell00)
+        TestBase.check("swap_rows", sheet.get_cell_at(1, 0) == cell)
 
     @staticmethod
     def test_swap_columns():
         sheet = Spreadsheet(3, 3)
-        cell00 = sheet.get_cell_at(0, 0)
+        cell = sheet.get_cell_at(0, 0)
+        cell.set_color(Color(1, 1, 1))
         sheet.swap_columns(0, 1)
 
-        TestBase.check("swap_rows", sheet.get_cell_at(0, 1) == cell00)
+        TestBase.check("swap_columns", sheet.get_cell_at(0, 1) == cell)
     @staticmethod
     def run_all():
         TestSpreadsheet.test_get_size()
