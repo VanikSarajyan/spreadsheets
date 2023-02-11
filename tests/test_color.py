@@ -17,7 +17,3 @@ class TestColor(TestBase):
 
         TestBase.check("set_rgb", color.get_rgb() == (10, 20, 30))
 
-    @staticmethod
-    def run_all():
-        TestColor.test_get_rgb()
-        TestColor.test_set_rgb()

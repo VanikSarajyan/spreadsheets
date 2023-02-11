@@ -58,13 +58,3 @@ class TestCell(TestBase):
 
         TestBase.check("reset", cell.get_value() == "")
 
-    @staticmethod
-    def run_all():
-        TestCell.test_get_value()
-        TestCell.test_set_value()
-        TestCell.test_get_color()
-        TestCell.test_set_color()
-        TestCell.test_to_int()
-        TestCell.test_to_double()
-        TestCell.test_to_date()
-        TestCell.test_reset()

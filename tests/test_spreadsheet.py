@@ -72,14 +72,3 @@ class TestSpreadsheet(TestBase):
         sheet.swap_columns(0, 1)
 
         TestBase.check("swap_columns", sheet.get_cell_at(0, 1) == cell)
-    @staticmethod
-    def run_all():
-        TestSpreadsheet.test_get_size()
-        TestSpreadsheet.test_get_cell_at()
-        TestSpreadsheet.test_set_cell_at()
-        TestSpreadsheet.test_add_row()
-        TestSpreadsheet.test_remove_row()
-        TestSpreadsheet.test_add_column()
-        TestSpreadsheet.test_remove_column()
-        TestSpreadsheet.test_swap_rows()
-        TestSpreadsheet.test_swap_columns()
